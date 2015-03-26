@@ -52,16 +52,12 @@ header #phone {
         float:right;
         display:block;
         position:relative;
-        margin:72px 200px 72px 0;
+        margin:52px 200px 72px 0;
 }
 
 header #phone p {
-        margin:0;
+        margin:20px 0 0;
         padding:0;
-}
-
-header #phone p:first-of-type {
-    margin-bottom:20px;
 }
 
 nav {
