@@ -1,12 +1,31 @@
-﻿body
+﻿html {
+    position:relative;
+    min-height:100%;
+    
+}
+
+body
 {
-    font-family:sans-serif;
     font-size:14px;
     padding:0;
     margin:0;
     width:100%;
     height:100%;
     line-height:22px;
+    overflow-x:hidden;
+    font-family: 'PT Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff2') format('woff2'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 a:hover {
@@ -27,6 +46,7 @@ header img {
 }
 
 header #phone {
+        font-family: 'open_sansregular';
         color:#767676;
         font-size:35px;
         float:right;
@@ -40,13 +60,19 @@ header #phone p {
         padding:0;
 }
 
+header #phone p:first-of-type {
+    margin-bottom:20px;
+}
+
 nav {
     background-color:#767676;
+    padding:0 10px;
 }
 
 nav ul {
     padding:0;
-    margin:0 17%;
+    margin:0;
+    text-align:center;
 }
 
 nav ul li {
@@ -71,13 +97,10 @@ nav ul li a:hover {
     text-decoration:underline;
 }
 
-main {
-    margin:0 0 195px 0;
-}
-
 #slider {   
     height:400px;
     overflow:hidden;
+    width:100%;
 }
 
 #slider p {
@@ -96,8 +119,7 @@ aside {
     background-color:#767676;
     color:#ffffff;
     width:350px;
-    margin:30px 60px 0 210px;
-    padding-bottom:100px;
+    margin:0 0 0 210px;
     float:left;
 }
 
@@ -126,11 +148,11 @@ aside p a {
 
 aside>p:last-of-type {
     text-align:right;
+    padding-bottom:100px;
 }
 
 article {
-    margin-top:30px;
-    margin-right:210px;
+    margin:30px 210px 0 60px;
     color:#767676;
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
@@ -144,8 +166,13 @@ article h1 {
 
 footer {
     background-color:#767676;
-    padding:60px 0;
     color:#ffffff;
+    position:absolute;
+    bottom:0;
+    height:220px;
+    min-width:980px;
+    width:100%;
+    padding:50px 10px 0;
 }
 
 footer #contact {
@@ -164,7 +191,7 @@ footer #contact p:first-of-type:before {
 
 footer #menu_nav {
     display:inline-block;
-        margin:0 200px 0 145px;
+    margin:0 0 0 145px;
 }
 
 footer #menu_nav ul {
@@ -178,7 +205,7 @@ footer #menu_nav ul li a {
 
 footer #logo2 {
     float:right;
-    margin-right:210px;
+    margin-right:230px;
 }
 
 footer #logo2 img {
@@ -196,3 +223,31 @@ footer #logo2 a:after {
 footer #logo2 p {
   white-space: nowrap;
 }
+
+header, nav, main, article, aside, footer {
+    display:block;
+}
+
+.maxw {
+    margin:0 auto;
+    min-width:980px;
+    max-width:1920px;
+}
+
+#wrapper {
+    position:relative;
+    margin:0 auto;
+    height:100%;
+    min-height:100%;
+}
+
+main {
+    padding:0 0 0 350px;
+    margin-left:210px;
+}
+
+.section {
+    width:100%;
+    padding:0 0 600px 0;
+    position:relative;
+} 
